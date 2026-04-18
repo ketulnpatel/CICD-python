@@ -35,9 +35,9 @@ jobs:
             - name: build and push docker image
               uses: docker/build-push-action@v5
               with:
-                contaxt: .
+                context: .
                 push: true
-                tags: ${{ secrets.DOCKERHUB_USERNAME }}/arsenal-app:latest
+                tags: ketulnpatel/arsenal-app:latest
               
               
 
