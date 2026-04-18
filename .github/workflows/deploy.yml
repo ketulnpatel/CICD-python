@@ -1,1 +1,32 @@
-# start write workflow
+name: Deploy Arsenal App
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: check out code
+              uses: actions/checkout@v4
+
+            - name: setup python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.12"
+
+            - name: install dependencies
+              run: pip install -r requirements.txt
+
+            - name: run tests
+              run: pytest tests/ -v      
+
+              
+              
+
+
+        
