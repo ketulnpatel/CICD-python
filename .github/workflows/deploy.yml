@@ -22,9 +22,10 @@ jobs:
             - name: install dependencies
               run: pip install -r requirements.txt
 
+            
+
             - name: run tests
-              run: pytest tests/ -v
-              working-directory: ${{ github.workspace }}
+              run: PYTHONPATH=. pytest tests/ -v
               
               
 
