@@ -46,7 +46,7 @@ def results():
 
 @app.route("/api/health")
 def health():
-    return jsonify({"status": "ok", "club": "Arsenal FC"})
+    return jsonify({"status": "ok", "club": "Arsenal FC", "deployed_by": "Ketul"})
 
 @app.route("/api/squad")
 def api_squad():
